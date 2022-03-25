@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/home/indexx';
-import Data from "./data.json";
+import Data from './data';
 
   
 function App() {
@@ -17,26 +17,26 @@ function App() {
          
 
 
-         {Data.map(data => (
         <div className="playlist-container">
           <div className="playlist-item">
             <img
               className="playlist-image"
-              src="https://pophariini.com/wp-content/uploads/2020/11/Art-work-Senja-Diaskara-Bintang-1068x1068.jpg"
+              src={Data.album.imgAlbum}
               alt="playlist"
             />
-            
             <div className="playlist-content">
-              <h2 className="playlist-title">{data.album}</h2>
-              <h3 className="playlist-description">{data.name} ~ {data.album}</h3>
+              <h2 className="playlist-title">{Data.album.name}</h2>
+              <div className='desc'>
+              <p>{Data.album.Art}</p>
+              <p>{Data.album.total_tracks} Songs</p>
+              </div>
             </div>
-          
             <div className="playlist-actions">
-              <button className="playlist-action" id=''>Select</button>
+              <button className="playlist-action" id=''><a href={Data.external_urls.spotify}>Select</a></button>
             </div>
           </div>
         </div>
-        ))}
+       
          </header>
         </div>
     );
