@@ -98,7 +98,7 @@ img{
 }
 /* playlist title */
 .playlist-title {
-  font-size: 25px;
+  font-size: 15px;
   margin-left: 20px;
   font-weight: 400;
   line-height: 1.5;
@@ -126,7 +126,7 @@ img{
  
 }
 .playlist-action:hover{
-  background-color: white;
+  background-color:white;
   color: black;
 }
 /* playlist action */
@@ -137,6 +137,21 @@ img{
   background-color: #00bcd4;
   color: #fff;
   cursor: pointer;
-  margin-left: 10px;
   border: #eee 1px solid;
+}
+
+.playlist-action a{
+  text-decoration: none;
+  color: white;
+}
+
+.playlist-action a:hover{
+  color: black;
+}
+
+.desc p{
+  float: left;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 20px;
 }
